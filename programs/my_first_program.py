@@ -6,7 +6,20 @@ def nada_main():
     my_int1 = SecretInteger(Input(name="my_int1", party=party1))
     my_int2 = SecretInteger(Input(name="my_int2", party=party1))
 
-    # write the computation for your program here - use my_int1 and my_int2 as inputs
-    # make sure you change the output below to be your new output
+    # Sum
+    sum_result = my_int1 + my_int2
+    
+    # Difference
+    diff_result = my_int1 - my_int2
+    
+    # Product
+    prod_result = my_int1 * my_int2
+    
 
-    return [Output(my_int1, "my_output", party1)]
+
+    # Return all results as outputs
+    return [
+        Output(sum_result, "sum_output", party1),
+        Output(diff_result, "diff_output", party1),
+        Output(prod_result, "prod_output", party1)
+    ]
